@@ -55,4 +55,6 @@ alias ga="git add"
 alias gc="git commit -m"
 
 # Start Z
-. `brew --prefix`/etc/profile.d/z.sh
+if hash brew 2>/dev/null; then
+  . `brew --prefix`/etc/profile.d/z.sh
+fi
