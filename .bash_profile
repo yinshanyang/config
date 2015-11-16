@@ -29,8 +29,11 @@ export PATH=~/Software/bin:${PATH}
 export PATH=/usr/local/bin:${PATH}
 export PATH=/usr/local/sbin:${PATH}
 
+# Generative Colours
+hostnamecolor=$(hostname | od | tr ' ' '\n' | awk '{total = total + $1}END{print 30 + (total % 6)}')
+
 # Colours for Prompt
-export PS1="\[$(tput setaf 5)\]\h\[$(tput setaf 12)\] ✖ \[$(tput setaf 5)\]\u\[$(tput setaf 12)\] ✖ \[$(tput setaf 7)\]\w/\[$(tput setaf 12)\]\$git_branch\$git_dirty ▸ \[$(tput sgr0)\]"
+export PS1="\[$(tput setaf ${hostnamecolor})\]\h\[$(tput setaf 12)\] ✖ \[$(tput setaf ${hostnamecolor})\]\u\[$(tput setaf 12)\] ✖ \[$(tput setaf 7)\]\w/\[$(tput setaf 12)\]\$git_branch\$git_dirty ▸ \[$(tput sgr0)\]"
 
 # Colours for ls
 export CLICOLOR=1
