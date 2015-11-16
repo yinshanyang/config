@@ -1,4 +1,4 @@
 #!/bin/bash
-ln ~/.config/.bash_profile ~/.bash_profile
-ln ~/.config/.vimrc ~/.vimrc
-ln ~/.config/.vim ~/.vim
+ln -s ~/.config/.bash_profile ~/.bash_profile
+ln -s ~/.config/.vimrc ~/.vimrc
+ln -s ~/.config/.vim ~/.vim
