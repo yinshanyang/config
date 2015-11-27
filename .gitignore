@@ -1,1 +1,7 @@
-configstore
+*
+!.gitignore
+!.vim
+!.vimrc
+!.bash_profile
+!link.sh
+!solarized.dark.terminal
