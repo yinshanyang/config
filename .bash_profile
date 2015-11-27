@@ -56,7 +56,7 @@ alias ga="git add"
 alias gc="git commit -m"
 
 # Docker Aliases
-alias docker-env="eval \"$(docker-machine env default)\""
+alias docker-env='eval "$(docker-machine env default)"'
 alias docker-registry="docker run -d -p 5000:5000 --restart=always --name registry registry"
 alias docker-clean-containers='docker rm $(docker ps -a -q)'
 alias docker-clean-images='docker rmi $(docker images -q -f dangling=true)'
