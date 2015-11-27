@@ -31,9 +31,10 @@ export PATH=/usr/local/sbin:${PATH}
 
 # Generative Colours
 hostnamecolor=$(hostname | od | tr ' ' '\n' | awk '{total = total + $1}END{print 1 + (total % 6)}')
+usernamecolor=$(id -u -n | od | tr ' ' '\n' | awk '{total = total + $1}END{print 1 + (total % 6)}')
 
 # Colours for Prompt
-export PS1="\[$(tput setaf ${hostnamecolor})\]\h\[$(tput setaf 12)\] ✖ \[$(tput setaf ${hostnamecolor})\]\u\[$(tput setaf 12)\] ✖ \[$(tput setaf 7)\]\w/\[$(tput setaf 12)\]\$git_branch\$git_dirty ▸ \[$(tput sgr0)\]"
+export PS1="\[$(tput setaf ${hostnamecolor})\]\h\[$(tput setaf 12)\] ✖ \[$(tput setaf ${usernamecolor})\]\u\[$(tput setaf 12)\] ✖ \[$(tput setaf 7)\]\w/\[$(tput setaf 12)\]\$git_branch\$git_dirty ▸ \[$(tput sgr0)\]"
 
 # Colours for ls
 export CLICOLOR=1
@@ -53,6 +54,12 @@ alias bn="babel-node"
 alias gs="git status -s"
 alias ga="git add"
 alias gc="git commit -m"
+
+# Docker Aliases
+alias docker-env="eval \"$(docker-machine env default)\""
+alias docker-registry="docker run -d -p 5000:5000 --restart=always --name registry registry"
+alias docker-clean-containers='docker rm $(docker ps -a -q)'
+alias docker-clean-images='docker rmi $(docker images -q -f dangling=true)'
 
 # Start Z
 if hash brew 2>/dev/null; then
