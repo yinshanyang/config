@@ -9,7 +9,7 @@ find_git() {
   local branch
   local status=$(git status --porcelain 2> /dev/null)
   if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
-    if [[ "$branch" == "HEAD" ]]; then
+    if [[ $branch == "HEAD" ]]; then
       branch='detached*'
     fi
     if [[ "$status" != "" ]]; then
@@ -22,7 +22,16 @@ find_git() {
   fi
 }
 
-PROMPT_COMMAND="find_git; $PROMPT_COMMAND"
+# Docker Aware Prompt
+find_machine() {
+  if [[ $DOCKER_MACHINE_NAME == "" ]]; then
+    machine=""
+  else
+    machine=" [$DOCKER_MACHINE_NAME]"
+  fi
+}
+
+PROMPT_COMMAND="find_git;find_machine; $PROMPT_COMMAND"
 
 # Pointer to installed binaries
 export PATH=~/Software/bin:${PATH}
@@ -34,7 +43,7 @@ hostnamecolor=$(hostname | od | tr ' ' '\n' | awk '{total = total + $1}END{print
 usernamecolor=$(id -u -n | od | tr ' ' '\n' | awk '{total = total + $1}END{print 1 + (total % 6)}')
 
 # Colours for Prompt
-export PS1="\[$(tput setaf ${hostnamecolor})\]\h\[$(tput setaf 12)\] ✖ \[$(tput setaf ${usernamecolor})\]\u\[$(tput setaf 12)\] ✖ \[$(tput setaf 7)\]\w/\[$(tput setaf 12)\]\$git_branch\$git_dirty ▸ \[$(tput sgr0)\]"
+export PS1="\[$(tput setaf ${hostnamecolor})\]\h\[$(tput setaf 12)\] ✖ \[$(tput setaf ${usernamecolor})\]\u\[$(tput setaf 12)\] ✖ \[$(tput setaf 7)\]\w/\[$(tput setaf 12)\]\$git_branch\$machine ▸ \[$(tput sgr0)\]"
 
 # Colours for ls
 export CLICOLOR=1
@@ -56,10 +65,11 @@ alias ga="git add"
 alias gc="git commit -m"
 
 # Docker Aliases
-alias docker-env='eval "$(docker-machine env default)"'
-alias docker-registry="docker run -d -p 5000:5000 --restart=always --name registry registry"
-alias docker-clean-containers='docker rm $(docker ps -a -q)'
-alias docker-clean-images='docker rmi $(docker images -q -f dangling=true)'
+de() {
+  eval "$(docker-machine env $1)"
+}
+alias dm="docker-machine"
+alias dc="docker-compose"
 
 # Start Z
 if hash brew 2>/dev/null; then
