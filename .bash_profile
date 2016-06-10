@@ -55,6 +55,9 @@ share() { rsync -z $1 web-share:/var/zpanel/hostdata/zadmin/public_html/shared_s
 # Transfer to transfer.sh
 transfer() { curl --progress-bar --upload-file $1 https://transfer.sh/$1 | pbcopy && pbpaste && say 'the magic is done, sire'; }
 
+# Count Lines of Code
+alias count="find . -name '*.js' | xargs wc -l"
+
 # List
 alias ll="ls -l"
 
