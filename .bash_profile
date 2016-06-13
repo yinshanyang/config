@@ -58,6 +58,9 @@ transfer() { curl --progress-bar --upload-file $1 https://transfer.sh/$1 | pbcop
 # Count Lines of Code
 alias count="find . -name '*.js' | xargs wc -l"
 
+# Recursive grep
+grr() { defaultPath=.; grep -r $1 ${2-$defaultPath}; }
+
 # List
 alias ll="ls -l"
 
