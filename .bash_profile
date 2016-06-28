@@ -50,7 +50,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 tabname() { printf "\e]1;$1\a"; }
 
 # Share to shared.swarm.is
-share() { rsync -z $1 web-share:/var/zpanel/hostdata/zadmin/public_html/shared_swarm_is/ && say 'the magic is done, sire'; }
+share() { rsync -rz $1 web-share:/var/zpanel/hostdata/zadmin/public_html/shared_swarm_is/${2-$1} && say 'the magic is done, sire'; }
 
 # Transfer to transfer.sh
 transfer() { curl --progress-bar --upload-file $1 https://transfer.sh/$1 | pbcopy && pbpaste && say 'the magic is done, sire'; }
