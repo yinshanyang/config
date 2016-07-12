@@ -56,7 +56,7 @@ share() { rsync -rz $1 web-share:/var/zpanel/hostdata/zadmin/public_html/shared_
 transfer() { curl --progress-bar --upload-file $1 https://transfer.sh/$1 | pbcopy && pbpaste && say 'the magic is done, sire'; }
 
 # Count Lines of Code
-alias count="find . -name '*.js' | xargs wc -l"
+alias count="find . -name '*.js' | grep -v 'constants\|config' | xargs wc -l"
 
 # Recursive grep
 grr() { defaultPath=.; grep -r $1 ${2-$defaultPath}; }
