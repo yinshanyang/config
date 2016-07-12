@@ -75,6 +75,7 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset %Cgreen(%cr)%Creset%C(yellow)%d%Creset %<(50,trunc)%s' --abbrev-commit"
 alias gp="git push"
+alias gd="git diff"
 
 # Docker Aliases
 alias doc="docker"
