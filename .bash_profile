@@ -62,7 +62,7 @@ alias count="find . -name '*.js' | grep -v 'constants\|config' | xargs wc -l"
 grr() { defaultPath=.; grep -r $1 ${2-$defaultPath}; }
 
 # List
-alias ll="ls -l"
+alias ll="ls -lha"
 
 # Node and NPM Aliases
 alias nr="npm run -s"
