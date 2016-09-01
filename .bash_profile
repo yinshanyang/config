@@ -79,6 +79,7 @@ alias gd="git diff"
 
 # Docker Aliases
 alias doc="docker"
+alias dock="docker"
 de() { eval "$(docker-machine env $1)"; }
 alias dm="docker-machine"
 alias dc="docker-compose"
