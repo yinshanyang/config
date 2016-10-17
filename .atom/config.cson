@@ -1,0 +1,51 @@
+"*":
+  Zen:
+    softWrap: true
+    typewriter: true
+    width: 80
+  core:
+    customFileTypes:
+      "source.js-semantic": [
+        "js"
+      ]
+    disabledPackages: [
+      "semanticolor"
+      "about"
+      "archive-view"
+      "autocomplete-atom-api"
+      "background-tips"
+      "bookmarks"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "nucleus-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Fira Code"
+    fontSize: 10
+    nonWordCharacters: "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
+    preferredLineLength: 9999
+    scrollPastEnd: true
+    showIndentGuide: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "6cfd29de-cf60-66c4-f945-15ebf18ea50b"
+  "linter-eslint":
+    useGlobalEslint: true
+  welcome:
+    showOnStartup: false
+".js.regexp.replacement.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
+    preferredLineLength: 9999
+    softWrapHangingIndent: 2
+".js.regexp.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
+    preferredLineLength: 9999
+    softWrapHangingIndent: 2
+".js.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
+    preferredLineLength: 9999
