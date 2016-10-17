@@ -1,0 +1,9 @@
+[user]
+	name = Yin Shanyang
+	email = yang@swarm.is
+[color]
+	ui = true
+[core]
+	editor = atom
+[push]
+	default = simple
