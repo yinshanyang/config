@@ -9,9 +9,9 @@ _find_git() {
       branch='detached*'
     fi
     if [[ "$status" != "" ]]; then
-      git_branch=" >$branch<"
+      git_branch=" · >$branch<"
     else
-      git_branch=" ($branch)"
+      git_branch=" · ($branch)"
     fi
   else
     git_branch=""
@@ -37,17 +37,25 @@ export PATH=/usr/local/sbin:${PATH}
 hostnamecolor=$(hostname | od | tr ' ' '\n' | awk '{total = total + $1}END{print 1 + (total % 6)}')
 usernamecolor=$(id -u -n | od | tr ' ' '\n' | awk '{total = total + $1}END{print 1 + (total % 6)}')
 
+
+SEGMENT_SEPARATOR="\ue0b0"
+
 # Colours for Prompt
-export PS1="\n\[$(tput setaf ${hostnamecolor})\]\h\[$(tput setaf 12)\] ✖ \[$(tput setaf ${usernamecolor})\]\u\[$(tput setaf 12)\] ✖ \[$(tput setaf 7)\]\w\[$(tput setaf 12)\]\$git_branch\$machine \n▸ \[$(tput sgr0)\]"
+export PS1="\n\[$(tput setaf 7)\]\w\[$(tput setaf 12)\]\$git_branch\$machine \n\[$(tput setaf ${hostnamecolor})\]\h\[$(tput setaf 12)\] · \[$(tput setaf ${usernamecolor})\]\u\[$(tput setaf 12)\] ▸ \[$(tput sgr0)\]"
 
 # Colours for ls
 export CLICOLOR=1
-export LSCOLORS=gxfxcxdxbxegedabagacad
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# Python
+export PIP_REQUIRE_VIRTUALENV=true
+gpip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
+
 
 # ALIASES
-
-# Name the Tab
-tabname() { printf "\e]1;$1\a"; }
 
 # Share to shared.swarm.is
 share() { rsync -rz $1 web-share:/var/zpanel/hostdata/zadmin/public_html/shared_swarm_is/$2 && say 'the magic is done, sire'; }
@@ -62,7 +70,12 @@ alias count="find . -name '*.js' | grep -v 'constants\|config' | xargs wc -l"
 grr() { defaultPath=.; grep -r $1 ${2-$defaultPath}; }
 
 # List
+alias ls="ls -GFh"
 alias ll="ls -lha"
+alias l="ls -1"
+
+# NeoVIM
+alias vi=nvim
 
 # Node and NPM Aliases
 alias nr="npm run -s"
@@ -83,6 +96,9 @@ alias dock="docker"
 de() { eval "$(docker-machine env $1)"; }
 alias dm="docker-machine"
 alias dc="docker-compose"
+
+# DataSpark Aliases
+alias ds='node -e "$(curl https://raw.githubusercontent.com/yinshanyang/ds-scaffold/master/scaffold.js)"'
 
 # Start Z
 if hash brew 2>/dev/null; then
