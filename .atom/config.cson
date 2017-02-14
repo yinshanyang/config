@@ -9,7 +9,6 @@
         "js"
       ]
     disabledPackages: [
-      "semanticolor"
       "about"
       "archive-view"
       "autocomplete-atom-api"
@@ -18,12 +17,13 @@
     ]
     telemetryConsent: "limited"
     themes: [
-      "nucleus-dark-ui"
+      "one-dark-ui"
       "solarized-dark-syntax"
     ]
+    useCustomTitleBar: true
   editor:
     fontFamily: "Fira Code"
-    fontSize: 10
+    fontSize: 12
     nonWordCharacters: "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
     preferredLineLength: 9999
     scrollPastEnd: true
@@ -33,6 +33,11 @@
     userId: "6cfd29de-cf60-66c4-f945-15ebf18ea50b"
   "linter-eslint":
     useGlobalEslint: true
+  "one-dark-ui":
+    layoutMode: "Compact"
+  "seti-ui":
+    compactView: true
+    disableAnimations: true
   welcome:
     showOnStartup: false
 ".js.regexp.replacement.source":
