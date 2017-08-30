@@ -1,3 +1,22 @@
+## 3.5.4 - fix error when first installing a new language
+
+## 3.5.3 - fix enabling grammars as they are created
+
+## 3.5.2 - another fix for issue adding new grammars to config
+
+## 3.5.1 - fix issue with adding new grammars to config
+
+## 3.5.0 - add default settings, remove annoying need to reload Atom
+* add Dockerfile and json to blacklist
+
+## 3.4.10 - fix different colors for same string
+
+## 3.4.9 - adjust identifier characters
+
+## 3.4.8 - fix typo in settings
+
+## 3.4.7 - fix a potential crash bug
+
 ## 3.4.6 - better solution for intermittent loading issue
 
 ## 3.4.5 - backcompat Atom < 1.13.0, support Vue.js components

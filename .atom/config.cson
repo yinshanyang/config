@@ -18,9 +18,9 @@
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "solarized-dark-syntax"
+      "gruvbox-theme"
     ]
-    useCustomTitleBar: true
+    titleBar: "custom"
   editor:
     fontFamily: "Fira Code"
     fontSize: 12
@@ -32,9 +32,10 @@
   "exception-reporting":
     userId: "6cfd29de-cf60-66c4-f945-15ebf18ea50b"
   "linter-eslint":
-    useGlobalEslint: true
+    disableWhenNoEslintConfig: false
+    globalNodePath: "/usr/local"
   "one-dark-ui":
-    layoutMode: "Compact"
+    tabSizing: "Minimum"
   "seti-ui":
     compactView: true
     disableAnimations: true

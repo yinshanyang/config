@@ -70,7 +70,7 @@ alias count="find . -name '*.js' | grep -v 'constants\|config' | xargs wc -l"
 grr() { defaultPath=.; grep -r $1 ${2-$defaultPath}; }
 
 # List
-alias ls="ls -GFh"
+alias ls="gls -GFh --color --group-directories-first"
 alias ll="ls -lha"
 alias l="ls -1"
 

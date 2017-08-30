@@ -1,0 +1,11 @@
+{
+  "name": "gruvbox-theme",
+  "theme": "syntax",
+  "version": "2.0.0",
+  "description": "A dark theme for Atom",
+  "repository": "https://github.com/yinshanyang/atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.13.0 <2.0.0"
+  }
+}
