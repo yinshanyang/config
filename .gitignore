@@ -1,0 +1,35 @@
+# basic
+*
+!.gitignore
+!README.md
+
+# zsh
+!zsh
+!zsh/zshrc
+!zsh/aliases.zsh
+!zsh/environment.zsh
+!zsh/prompt.zsh
+
+# homebrew
+!Brewfile
+
+# starship
+!starship.toml
+
+# alfred
+!alfred
+!alfred/**
+alfred/Alfred.alfredpreferences/preferences/local
+
+# iterm2
+!iterm2
+!iterm2/settings
+!iterm2/settings/com.googlecode.iterm2.plist
+
+# firefox
+!firefox
+!firefox/userChrome.css
+
+# vscode
+!vscode.extensions
+!vscode.settings.json

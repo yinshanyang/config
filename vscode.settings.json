@@ -1,0 +1,158 @@
+{
+  // editor and general style
+  "window.titleBarStyle": "native",
+  "customizeUI.titleBar": "frameless",
+  "customizeUI.stylesheet": {
+    ".title-actions": "display: none !important",
+    ".fullscreen .title": "display: none !important",
+    ".quick-input-widget": "box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5) !important",
+    ".quick-input-list-label": "color: rgba(236, 239, 244, 0.5);",
+    ".quick-input-list-label .highlight": "color: #eceff4 !important",
+    ".quick-input-list-separator": "color: #5e81ac !important",
+    ".input::selection": "color: #b48ead; background: none",
+    ".monaco-keybinding-key": "box-shadow: none !important"
+  },
+  "workbench.iconTheme": null,
+  "workbench.activityBar.visible": false,
+  "workbench.tips.enabled": false,
+  "workbench.editor.showTabs": false,
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  "workbench.colorTheme": "Nord",
+  "workbench.colorCustomizations": {
+    "[Nord]": {
+      "quickInput.foreground": "#eceff4",
+      "quickInputList.focusBackground": "#3b4252",
+      "quickInputList.focusForeground": "#eceff4",
+      "keybindingLabel.background": "#00000000"
+    }
+  },
+  "breadcrumbs.icons": false,
+  "breadcrumbs.symbolPath": "off",
+  "editor.columnSelection": false,
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "FiraCode Nerd Font Mono, monospace",
+  "editor.fontLigatures": "'ss01', 'ss04', 'ss06'",
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.overviewRulerBorder": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.semanticTokenColorCustomizations": {
+    "[Nord]": {
+      "rules": {
+        "function.async": "#b48ead",
+        "variable.async": "#b48ead",
+        "method": "#5e81ac",
+        "method.async": "#b48ead",
+        "variable.mutable": { "fontStyle": "underline" },
+        "property": "#d08770",
+        "formatSpecifier": "#ebcb8b"
+      }
+    }
+  },
+  "diffEditor.renderSideBySide": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.telemetryLevel": "off",
+  "window.openFilesInNewWindow": "on",
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#bf616a",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "?",
+      "color": "#b48ead",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "//",
+      "color": "#4c566a",
+      "strikethrough": true,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#d08770",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "*",
+      "color": "#ebcb8b",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  "indentRainbow.colors": [
+    "#b48ead11",
+    "#a3be8c11",
+    "#ebcb8b11",
+    "#d0877011",
+    "#bf616a11"
+  ],
+  "indentRainbow.errorColor": "#bf616aaa",
+  "indentRainbow.tabmixColor": "#bf616aaa",
+  "files.associations": {
+    "*.hcl": "terraform"
+  },
+
+  // languages
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "python.formatting.provider": "black",
+
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+
+  "[sql]": {},
+  "sqltools.connections": [],
+  "sqltools.format": {
+    "reservedWordCase": "lower"
+  },
+
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "terraform.languageServer.enable": true,
+  "terraform.languageServer.path": "",
+
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+
+  "[markdown]": {
+    "editor.fontFamily": "'iA Writer Duo S Regular', iAWriterDuoS-Regular, monospace",
+    "editor.fontSize": 32,
+    "editor.lineHeight": 80,
+    // "editor.wordWrapColumn": 48,
+    "editor.wordWrap": "bounded",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.occurrencesHighlight": false,
+    "editor.padding.top": 999,
+    "editor.cursorSurroundingLines": 999
+  },
+  "editor.unicodeHighlight.allowedCharacters": {
+    "’": true
+  }
+}

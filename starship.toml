@@ -1,0 +1,49 @@
+format = """
+$directory[\uE0B0](fg:bright-black bg:black)\
+$git_branch$git_status[\uE0B0](fg:black bg:none)\
+$character
+"""
+right_format = """
+$cmd_duration\
+$time
+"""
+add_newline = true
+
+[character]
+format = " "
+
+[directory]
+truncation_length = 5
+truncation_symbol = "…/"
+truncate_to_repo = false
+format = "[ $path ]($style)"
+style = "bg:bright-black fg:white dimmed"
+
+[git_branch]
+always_show_remote = true
+format = "[ $branch ]($style)"
+style = "bg:black fg:white dimmed"
+
+[git_status]
+format = "[$all_status]($style)"
+style = "bg:black fg:bright-white bold"
+ahead = "⇡ "
+behind = "⇣ "
+diverged = "⇕(red) "
+up_to_date = " "
+untracked = "[\uF111](bg:black fg:yellow) "
+stashed = "[\uF111](bg:black fg:white) "
+modified = "[\uF111](bg:black fg:bright-yellow) "
+staged = "[\uF111](bg:black fg:green) "
+renamed = "» "
+deleted = "[\uF111](bg:black fg:red) "
+
+[time]
+disabled = false
+format = "[ $time ]($style)"
+style = "bg:bright-black fg:white dimmed"
+
+[cmd_duration]
+min_time = 0
+format = "[ $duration ]($style)"
+style = "bg:black fg:white dimmed"
