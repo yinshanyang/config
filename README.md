@@ -1,4 +1,4 @@
-```bash
+```shell
 # brew
 brew bundle install
 
@@ -18,7 +18,7 @@ cp -r alfred ~/.alfred
 
 # `asdf`
 
-```bash
+```shell
 # add plugin
 asdf plugin add nodejs
 # install latest version
@@ -29,6 +29,13 @@ asdf global nodejs latest
 
 # Firefox
 
-```
+```shell
 ~/Library/Application Support/Firefox/Profiles/…-release/chrome/userChrome.css
+```
+
+# VS Code
+
+```shell
+# if monkey patch stops working
+rm ~/Library/Application Support/Code/User/globalStorage/state.vscdb
 ```
