@@ -32,8 +32,12 @@
   "editor.columnSelection": false,
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
-  "editor.fontFamily": "FiraCode Nerd Font Mono, monospace",
-  "editor.fontLigatures": "'ss01', 'ss04', 'ss06'",
+  "editor.fontFamily": "JetBrains Mono, FiraCode Nerd Font Mono, monospace",
+  "editor.fontSize": 12,
+  "editor.lineHeight": 18,
+  "editor.fontLigatures": true,
+  // "editor.fontFamily": "FiraCode Nerd Font Mono, monospace",
+  // "editor.fontLigatures": "'ss01', 'ss04', 'ss06'",
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.overviewRulerBorder": false,
@@ -113,10 +117,16 @@
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
 
-  "[sql]": {},
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
   "sqltools.connections": [],
+  "sqltools.results.reuseTabs": "connection",
+  "sqltools.showStatusbar": false,
   "sqltools.format": {
-    "reservedWordCase": "lower"
+    "reservedWordCase": "lower",
+    "language": "sql",
+    "linesBetweenQueries": 3
   },
 
   "[terraform]": {
