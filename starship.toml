@@ -25,22 +25,23 @@ format = "[ $branch ]($style)"
 style = "bg:black fg:white dimmed"
 
 [git_status]
-format = "[$all_status]($style)"
+format = "[$all_status ]($style)"
 style = "bg:black fg:bright-white bold"
-ahead = "⇡ "
-behind = "⇣ "
-diverged = "⇕(red) "
-up_to_date = " "
-untracked = "[\uF111](bg:black fg:yellow) "
-stashed = "[\uF111](bg:black fg:white) "
-modified = "[\uF111](bg:black fg:bright-yellow) "
-staged = "[\uF111](bg:black fg:green) "
-renamed = "» "
-deleted = "[\uF111](bg:black fg:red) "
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕(red)"
+up_to_date = ""
+untracked = "[●](bg:black fg:yellow)"
+stashed = "[●](bg:black fg:white)"
+modified = "[●](bg:black fg:cyan)"
+staged = "[●](bg:black fg:green)"
+renamed = "[→ ](bg:black fg:cyan)"
+deleted = "[●](bg:black fg:red)"
 
 [time]
 disabled = false
 format = "[ $time ]($style)"
+time_format = "%R"
 style = "bg:bright-black fg:white dimmed"
 
 [cmd_duration]
