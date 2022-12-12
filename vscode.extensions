@@ -1,7 +1,5 @@
 aaron-bond.better-comments
 arcticicestudio.nord-visual-studio-code
-bierner.markdown-mermaid
-bpruitt-goddard.mermaid-markdown-syntax-highlighting
 bungcip.better-toml
 dbaeumer.vscode-eslint
 eamodio.gitlens
@@ -10,15 +8,10 @@ hashicorp.terraform
 iocave.customize-ui
 iocave.monkey-patch
 kj.sqltools-driver-redshift
-ms-azuretools.vscode-docker
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
-ms-vscode-remote.remote-containers
-ms-vscode-remote.remote-ssh
-ms-vscode-remote.remote-ssh-edit
 mtxr.sqltools
 oderwat.indent-rainbow
 rust-lang.rust-analyzer
-samuelcolvin.jinjahtml
 usernamehw.errorlens
