@@ -37,5 +37,5 @@ asdf global nodejs latest
 
 ```shell
 # if monkey patch stops working
-rm ~/Library/Application Support/Code/User/globalStorage/state.vscdb
+rm ~/Library/Application\ Support/Code/User/globalStorage/state.vscdb
 ```
