@@ -29,9 +29,15 @@ asdf global nodejs latest
 
 # Firefox
 
+- https://www.reddit.com/r/firefox/wiki/userchrome/
+
+In Firefox, set: `about:config` > `toolkit.legacyUserProfileCustomizations.stylesheets` > `true`
+
 ```shell
 ~/Library/Application Support/Firefox/Profiles/…-release/chrome/userChrome.css
 ```
+
+To inspect selectors for userChrome, go to `chrome://browser/content/browser.xhtml` and use the inspector tool.
 
 # VS Code
 
