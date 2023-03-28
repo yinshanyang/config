@@ -19,6 +19,16 @@
   margin: 0;
 }
 
+.tab-background[selected='true'] {
+  background-color: rgb(32, 37, 45) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.tab-content[selected='true'] {
+  color: #eceff4 !important;
+}
+
 .tab-close-button {
   display: none !important;
 }
