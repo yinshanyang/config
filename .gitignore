@@ -37,3 +37,7 @@ alfred/Alfred.alfredpreferences/preferences/local
 # vscode
 !vscode.extensions
 !vscode.settings.json
+
+# nvim
+!nvim
+!nvim/**
