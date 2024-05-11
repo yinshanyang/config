@@ -6,7 +6,8 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 # utilities
-alias count="find '\..' . | xargs wc -l"
+alias count="fd '\..' . | xargs wc -l"
+alias serve="python3 -m http.server -b::"
 
 # rust replacements
 # - ls
@@ -39,6 +40,9 @@ alias gl="git log --branches --remotes --graph --pretty=format:'%Cred%h%Creset %
 alias gp="git push --follow-tags"
 alias gd="git diff"
 
+#cargo
+alias cw="cargo watch --clear --watch src --exec run"
+
 # cht.sh
 cht() { http cht.sh/$1 }
 
@@ -57,3 +61,10 @@ ex() {
     echo "'$1' is not a file"
   fi
 }
+
+# sing
+alias sing="say Hello my baby, Hello my Honey, hello my ragtime gal! Send me a kiss by wire, baby my heart’s on fire! If you refuse me, honey you’ll lose me, then you’ll be left alone, oh baby! Telephone and tell me I’m your own!"
+
+# jira :face_vomiting:
+jira-ddd () { jira issue list --project DDD --order-by priority -a $(jira me) -q "status not in (Done, 'WONT DO', 'Prod Ready', REJECTED)" }
+jira-itsm () { jira issue list --project ITSM --order-by priority -a $(jira me) -q "status not in (Closed, Canceled)" }
