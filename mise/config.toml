@@ -1,0 +1,7 @@
+[tools]
+bun = '1.0'
+node = '20'
+rust = '1'
+terraform = '1'
+zig = '0.11'
+

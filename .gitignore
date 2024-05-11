@@ -41,3 +41,7 @@ alfred/Alfred.alfredpreferences/preferences/local
 # nvim
 !nvim
 !nvim/**
+
+# mise
+!mise
+!mise/config.toml
