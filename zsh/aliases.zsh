@@ -65,6 +65,3 @@ ex() {
 # sing
 alias sing="say Hello my baby, Hello my Honey, hello my ragtime gal! Send me a kiss by wire, baby my heart’s on fire! If you refuse me, honey you’ll lose me, then you’ll be left alone, oh baby! Telephone and tell me I’m your own!"
 
-# jira :face_vomiting:
-jira-ddd () { jira issue list --project DDD --order-by priority -a $(jira me) -q "status not in (Done, 'WONT DO', 'Prod Ready', REJECTED)" }
-jira-itsm () { jira issue list --project ITSM --order-by priority -a $(jira me) -q "status not in (Closed, Canceled)" }
