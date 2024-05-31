@@ -1,8 +1,11 @@
 {
   // editor and general style
   "window.titleBarStyle": "native",
-  "customizeUI.titleBar": "frameless",
-  "customizeUI.stylesheet": {
+  "window.customTitleBarVisibility": "never",
+  "apc.electron": {
+    "frame": false
+  },
+  "apc.stylesheet": {
     ".title-actions": "display: none !important",
     ".fullscreen .title": "display: none !important",
     ".quick-input-widget": "box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5) !important",
@@ -10,12 +13,13 @@
     ".quick-input-list-label .highlight": "color: #eceff4 !important",
     ".quick-input-list-separator": "color: #5e81ac !important",
     ".input::selection": "color: #b48ead; background: none",
-    ".monaco-keybinding-key": "box-shadow: none !important"
+    ".monaco-keybinding-key": "box-shadow: none !important",
+    ".editor-group-letterpress": "display: none !important",
+    ".monaco-editor .scroll-decoration": "display: none !important"
   },
   "workbench.iconTheme": null,
-  "workbench.activityBar.visible": false,
   "workbench.tips.enabled": false,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": false,
   "workbench.colorTheme": "Nord",
@@ -27,17 +31,16 @@
       "keybindingLabel.background": "#00000000"
     }
   },
+  "workbench.editor.openSideBySideDirection": "down",
   "breadcrumbs.icons": false,
   "breadcrumbs.symbolPath": "off",
   "editor.columnSelection": false,
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
-  "editor.fontFamily": "JetBrains Mono, FiraCode Nerd Font Mono, monospace",
+  "editor.fontFamily": "Liga SFMono Nerd Font, JetBrains Mono, FiraCode Nerd Font Mono, monospace",
   "editor.fontSize": 12,
   "editor.lineHeight": 18,
   "editor.fontLigatures": true,
-  // "editor.fontFamily": "FiraCode Nerd Font Mono, monospace",
-  // "editor.fontLigatures": "'ss01', 'ss04', 'ss06'",
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.overviewRulerBorder": false,
@@ -45,6 +48,14 @@
   "editor.scrollbar.horizontal": "hidden",
   "editor.hideCursorInOverviewRuler": true,
   "editor.renderWhitespace": "trailing",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": { "fontStyle": "italic" }
+      }
+    ]
+  },
   "editor.semanticTokenColorCustomizations": {
     "[Nord]": {
       "rules": {
@@ -104,30 +115,42 @@
   "indentRainbow.errorColor": "#bf616aaa",
   "indentRainbow.tabmixColor": "#bf616aaa",
   "files.associations": {
-    "*.hcl": "terraform"
+    "*.hcl": "terraform",
+    "*.sql": "sql"
   },
 
   // languages
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
-  },
-  "python.formatting.provider": "black",
+  // "[python]": {
+  //   "editor.defaultFormatter": "ms-python.python"
+  // },
+  // "python.formatting.provider": "black",
 
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
 
-  "[sql]": {
-    "editor.defaultFormatter": "mtxr.sqltools"
+  "[jinja-sql]": {
+    // "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
+  },
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.sql(\\.jinja)?$",
+        "isAsync": true,
+        "cmd": "sqlfmt ${file}"
+      }
+    ]
+  },
+  // use sqltools only for connection and querying
+  // i.e. disable formatting and autocomplete
+  "sqltools.showStatusbar": false,
+  "sqltools.highlightQuery": false,
+  "sqltools.completionLanguages": [],
+  "sqltools.formatLanguages": [],
+  "sqltools.results.customization": {
+    "font-family": "Liga SFMono Nerd Font, JetBrains Mono, FiraCode Nerd Font Mono, monospace"
   },
   "sqltools.connections": [],
-  "sqltools.results.reuseTabs": "connection",
-  "sqltools.showStatusbar": false,
-  "sqltools.format": {
-    "reservedWordCase": "lower",
-    "language": "sql",
-    "linesBetweenQueries": 3
-  },
 
   "[terraform]": {
     "editor.defaultFormatter": "hashicorp.terraform"
@@ -137,32 +160,36 @@
 
   "[typescript]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "typescript.inlayHints.parameterNames.enabled": "literals",
-  "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
 
-  "[markdown]": {
+  "[juliamarkdown]": {
     "editor.fontFamily": "'iA Writer Duo S Regular', iAWriterDuoS-Regular, monospace",
     "editor.fontSize": 32,
     "editor.lineHeight": 80,
     // "editor.wordWrapColumn": 48,
+    "editor.wrappingStrategy": "advanced",
     "editor.wordWrap": "bounded",
     "editor.quickSuggestions": {
       "comments": "off",
       "strings": "off",
       "other": "off"
     },
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.padding.top": 999,
     "editor.cursorSurroundingLines": 999
   },
   "editor.unicodeHighlight.allowedCharacters": {
     "’": true
-  }
+  },
+  "sqltools.sortColumns": "ordinalnumber",
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "rust-analyzer.server.path": "/Users/shanyang/.local/share/mise/installs/rust/1/bin/rust-analyzer",
+  "workbench.activityBar.location": "hidden"
 }
