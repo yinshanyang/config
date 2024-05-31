@@ -11,7 +11,7 @@ alias serve="python3 -m http.server -b::"
 
 # rust replacements
 # - ls
-alias ls="exa --group-directories-first --ignore-glob=\"Documents|Library|Movies|Music|Pictures|Public\""
+alias ls="eza --group-directories-first --ignore-glob=\"Documents|Library|Movies|Music|Pictures|Public\""
 alias ll="ls -la --git"
 alias lt="ls --tree"
 alias l="ls -1"
