@@ -41,6 +41,11 @@
 !karabiner
 !karabiner/karabiner.json
 
+# ubersicht
+!ubersicht
+!ubersicht/widgets
+!ubersicht/widgets/**
+
 # vscode
 !vscode.extensions
 !vscode.settings.json
