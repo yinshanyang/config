@@ -1,5 +1,6 @@
 # basic
 *
+.DS_Store
 !.gitignore
 !README.md
 
@@ -18,8 +19,11 @@
 
 # alfred
 !alfred
-!alfred/**
-alfred/Alfred.alfredpreferences/preferences/local
+!alfred/Alfred.alfredpreferences/preferences/appearance
+!alfred/Alfred.alfredpreferences/preferences/feature
+!alfred/Alfred.alfredpreferences/preferences/themes
+!alfred/Alfred.alfredpreferences/themes
+
 
 # firefox
 !firefox
