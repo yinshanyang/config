@@ -19,11 +19,14 @@
 
 # alfred
 !alfred
+!alfred/Alfred.alfredpreferences
+!alfred/Alfred.alfredpreferences/preferences
 !alfred/Alfred.alfredpreferences/preferences/appearance
-!alfred/Alfred.alfredpreferences/preferences/feature
-!alfred/Alfred.alfredpreferences/preferences/themes
+!alfred/Alfred.alfredpreferences/preferences/appearance/**
+!alfred/Alfred.alfredpreferences/preferences/features
+!alfred/Alfred.alfredpreferences/preferences/features/**
 !alfred/Alfred.alfredpreferences/themes
-
+!alfred/Alfred.alfredpreferences/themes/**
 
 # firefox
 !firefox
