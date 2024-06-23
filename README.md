@@ -1,4 +1,9 @@
 ```shell
+
+# TODO
+
+- try this solution for clearing linebreak: https://github.com/starship/starship/issues/560#issuecomment-1375794423
+
 # brew
 brew bundle install
 

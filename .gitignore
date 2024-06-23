@@ -32,6 +32,13 @@
 !firefox
 !firefox/userChrome.css
 
+# alacritty
+!alacritty
+!alacritty/alacritty.toml
+!alacritty/themes
+!alacritty/themes/*
+!alacritty/icon.sh
+
 # iterm2
 !iterm2
 !iterm2/settings
