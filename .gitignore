@@ -32,6 +32,10 @@
 !firefox
 !firefox/userChrome.css
 
+# ghostty
+!ghostty
+!ghostty/config
+
 # alacritty
 !alacritty
 !alacritty/alacritty.toml

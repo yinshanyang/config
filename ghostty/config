@@ -1,0 +1,12 @@
+macos-titlebar-style = hidden
+window-padding-x = 12
+window-padding-y = 12
+resize-overlay = never
+theme = "nord"
+
+font-family = ""
+font-family = "SF Mono"
+font-size = 12
+font-thicken = true
+adjust-cell-width = -7%
+adjust-cell-height = 25%
