@@ -17,6 +17,10 @@
     box-shadow: none !important;
   }
 
+  #nav-bar #urlbar {
+    opacity: 0 !important;
+  }
+
   .titlebar-buttonbox-container {
     display: none !important;
   }
@@ -25,8 +29,8 @@
     display: none !important;
   }
 
-  .titlebar-spacer[type='pre-tabs'],
-  .titlebar-spacer[type='post-tabs'] {
+  .titlebar-spacer[type="pre-tabs"],
+  .titlebar-spacer[type="post-tabs"] {
     width: 8px !important;
     padding: 0;
     margin: 0;
@@ -59,7 +63,7 @@
   }
 
   /* fullscreen mode*/
-  toolbox[inFullscreen='true'] {
+  toolbox[inFullscreen="true"] {
     display: none;
   }
 }
