@@ -16,7 +16,7 @@ alias ll="ls -la --git"
 alias lt="ls --tree"
 alias l="ls -1"
 # - http
-http() { xh --follow $@ user-agent:curl/7.77.0; }
+http() { xh --https --follow $@ user-agent:curl/7.77.0; }
 # - cat
 alias cat="bat --paging=never"
 # - grep
