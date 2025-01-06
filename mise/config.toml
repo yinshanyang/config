@@ -1,5 +1,5 @@
 [tools]
-bun = '1.0'
+bun = '1'
 node = '20'
 python = '3'
 rust = '1'
