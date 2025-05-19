@@ -17,6 +17,7 @@ alias lt="ls --tree"
 alias l="ls -1"
 # - http
 http() { xh --https --follow $@ user-agent:curl/7.77.0; }
+headers() { http --verbose --print=hH $@ }
 # - cat
 alias cat="bat --paging=never"
 # - grep
