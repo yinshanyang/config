@@ -14,6 +14,10 @@ return {
 
     local keymap = vim.keymap -- for conciseness
 
+    vim.lsp.inlay_hint.enable(true)
+    vim.diagnostic.enable()
+    vim.diagnostic.config({ virtual_lines = true, virtual_text = false })
+
     local opts = { noremap = true, silent = true }
     local on_attach = function(client, bufnr)
       opts.buffer = bufnr
@@ -70,32 +74,21 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    -- TODO!: is this correct?
-    vim.lsp.inlay_hint.enable(true)
-
-    lspconfig["tsserver"].setup({
+    lspconfig["vtsls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      single_file_support = true,
       settings = {
-        javascript = {
-          inlayHints = {
-            includeInlayEnumMemberValueHints = true,
-            includInlayFunctionLikeReturnTypeHints = true,
-            includInlayFunctionParameterTypeHints = true,
-            includeInlayParameterNameHints = "all",
-            includeInlayPropertyDeclarationTypeHints = true,
-            includeInlayVariableTypeHints = true,
-          },
-        },
         typescript = {
+          suggest = {
+            completeFunctionCalls = true,
+          },
           inlayHints = {
-            includeInlayEnumMemberValueHints = true,
-            includInlayFunctionLikeReturnTypeHints = true,
-            includInlayFunctionParameterTypeHints = true,
-            includeInlayParameterNameHints = "all",
-            includeInlayPropertyDeclarationTypeHints = true,
-            includeInlayVariableTypeHints = true,
+            enumMemberValues = { enabled = true },
+            functionLikeReturnTypes = { enabled = true },
+            parameterNames = { enabled = "literals" },
+            parameterTypes = { enabled = true },
+            propertyDeclarationTypes = { enabled = true },
+            variableTypes = { enabled = true },
           },
         },
       },
@@ -123,6 +116,7 @@ return {
         Lua = {
           -- make the language server recognize "vim" global
           diagnostics = {
+            enabled = true,
             globals = { "vim" },
           },
           workspace = {

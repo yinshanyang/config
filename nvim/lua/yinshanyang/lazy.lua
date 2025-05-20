@@ -16,14 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { import = "yinshanyang.plugins" },
   { import = "yinshanyang.plugins.lsp" },
-  install = {
-    colorscheme = { "nord" },
-  },
-  checker = {
-    enabled = true,
-    notify = false,
-  },
-  change_detection = {
-    notify = false,
-  },
+  install = { colorscheme = { "nord" } },
+  checker = { enabled = true, notify = false },
+  change_detection = { notify = false },
 })

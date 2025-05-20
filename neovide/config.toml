@@ -1,5 +1,6 @@
 frame = "buttonless"
 title-hidden = true
+fork = true
 
 [font]
 normal = ["Liga SFMono Nerd Font"]
