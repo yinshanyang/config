@@ -70,9 +70,35 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
+    -- TODO!: is this correct?
+    vim.lsp.inlay_hint.enable(true)
+
     lspconfig["tsserver"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      single_file_support = true,
+      settings = {
+        javascript = {
+          inlayHints = {
+            includeInlayEnumMemberValueHints = true,
+            includInlayFunctionLikeReturnTypeHints = true,
+            includInlayFunctionParameterTypeHints = true,
+            includeInlayParameterNameHints = "all",
+            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayVariableTypeHints = true,
+          },
+        },
+        typescript = {
+          inlayHints = {
+            includeInlayEnumMemberValueHints = true,
+            includInlayFunctionLikeReturnTypeHints = true,
+            includInlayFunctionParameterTypeHints = true,
+            includeInlayParameterNameHints = "all",
+            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayVariableTypeHints = true,
+          },
+        },
+      },
     })
     lspconfig["rust_analyzer"].setup({
       capabilities = capabilities,

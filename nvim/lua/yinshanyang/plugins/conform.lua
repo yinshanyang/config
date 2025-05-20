@@ -6,6 +6,23 @@ return {
     local conform = require("conform")
 
     conform.setup({
+      formatters = {
+        prettier = {
+          args = function(self, ctx)
+            local check_cwd = require("conform.util").root_file({
+              ".prettierrc",
+              ".prettierrc.json",
+              ".prettierrc.yml",
+              ".prettierrc.yaml",
+            })
+            local has_cwd = check_cwd(self, ctx) ~= nil
+            if not has_cwd then
+              return { "--stdin-filepath", "$FILENAME", "--config", "/Users/shanyang/.config/prettier/config.json" }
+            end
+            return { "--stdin-filepath", "$FILENAME" }
+          end,
+        },
+      },
       formatters_by_ft = {
         javascript = { "prettier" },
         typescript = { "prettier" },
