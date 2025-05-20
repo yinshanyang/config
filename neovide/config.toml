@@ -1,0 +1,6 @@
+frame = "buttonless"
+title-hidden = true
+
+[font]
+normal = ["Liga SFMono Nerd Font"]
+size = 12.0

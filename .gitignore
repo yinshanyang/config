@@ -65,6 +65,10 @@
 !nvim
 !nvim/**
 
+# neovide
+!neovide
+!neovide/**
+
 # mise
 !mise
 !mise/config.toml
