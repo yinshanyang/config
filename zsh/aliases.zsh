@@ -47,6 +47,13 @@ alias cw="cargo watch --clear --watch src --exec run"
 # cht.sh
 cht() { http cht.sh/$1 }
 
+# zenith
+alias zenith="zenith --disable-history"
+
+# bitwarden-cli
+alias bw-list="bw sync && bw list items --folderid d91a71ad-72eb-4314-8bd4-701170f2224c | jq '.[] | {id, name} | join(\" \")'"
+alias bw-get="bw sync && bw get notes"
+
 # extract
 ex() {
   if [ -f $1 ]; then
