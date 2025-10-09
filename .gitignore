@@ -72,3 +72,7 @@
 # mise
 !mise
 !mise/config.toml
+
+# prettier
+!prettier
+!prettier/config.json
