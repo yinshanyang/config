@@ -1,4 +1,5 @@
 format = """
+${custom.bw_session}\
 $directory[\uE0B0](fg:bright-black bg:black)\
 $git_branch$git_status[\uE0B0](fg:black bg:none)\
 $character
@@ -13,16 +14,20 @@ add_newline = false
 format = " "
 
 [directory]
+format = "[ $path ]($style)"
+style = "bg:bright-black fg:white dimmed"
 truncation_length = 5
 truncation_symbol = "…/"
 truncate_to_repo = false
-format = "[ $path ]($style)"
-style = "bg:bright-black fg:white dimmed"
+
+[custom.bw_session]
+format = "[ •](bg:green fg:bright-black)[\uE0B0](fg:green bg:bright-black)"
+when = 'test -n "$BW_SESSION"'
 
 [git_branch]
-always_show_remote = true
 format = "[ $branch ]($style)"
 style = "bg:black fg:white dimmed"
+always_show_remote = true
 
 [git_status]
 format = "([$all_status ]($style))"
@@ -39,12 +44,12 @@ renamed = "[→ ](bg:black fg:cyan)"
 deleted = "[●](bg:black fg:red)"
 
 [time]
-disabled = false
 format = "[ $time ]($style)"
-time_format = "%R"
 style = "bg:bright-black fg:white dimmed"
+disabled = false
+time_format = "%R"
 
 [cmd_duration]
-min_time = 0
 format = "[ $duration ]($style)"
 style = "bg:black fg:white dimmed"
+min_time = 0

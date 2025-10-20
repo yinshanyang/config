@@ -51,8 +51,11 @@ cht() { http cht.sh/$1 }
 alias zenith="zenith --disable-history"
 
 # bitwarden-cli
+alias bw-unlock='bw unlock --raw | export BW_SESSION=$(cat)'
+alias bw-lock="bw lock && export BW_SESSION="
 alias bw-list="bw sync && bw list items --folderid d91a71ad-72eb-4314-8bd4-701170f2224c | jq '.[] | {id, name} | join(\" \")'"
 alias bw-get="bw sync && bw get notes"
+bw-diff() { bw-get $1 | diff - $2 }
 
 # extract
 ex() {
