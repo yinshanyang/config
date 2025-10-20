@@ -13,3 +13,5 @@ adjust-cell-height = 25%
 
 keybind = unconsumed:super+shift+[=previous_tab
 keybind = unconsumed:super+shift+]=next_tab
+
+keybind = super+f=write_screen_file:open
