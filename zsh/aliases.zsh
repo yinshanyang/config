@@ -56,6 +56,35 @@ alias bw-lock="bw lock && export BW_SESSION="
 alias bw-list="bw sync && bw list items --folderid d91a71ad-72eb-4314-8bd4-701170f2224c | jq '.[] | {id, name} | join(\" \")'"
 alias bw-get="bw sync && bw get notes"
 bw-diff() { bw-get $1 | diff - $2 }
+bw-switch() {
+  local bw_dir="$HOME/.config/bitwarden"
+
+  # List available accounts if no argument given
+  if [[ -z "$1" ]]; then
+    echo "Available accounts:"
+    for d in "$bw_dir"/*/; do
+      local domain="${d%/}"
+      domain="${domain##*/}"
+      if [[ "$HOME/.config/bitwarden/$domain" == "$BITWARDENCLI_APPDATA_DIR" ]]; then
+        echo "  * $domain (active)"
+      else
+        echo "    $domain"
+      fi
+    done
+    return 0
+  fi
+
+  local target="$bw_dir/$1"
+
+  if [[ ! -d "$target" ]]; then
+    echo "Unknown account: $1"
+    echo "Run 'bw-switch' with no arguments to list available accounts."
+    return 1
+  fi
+
+  export BITWARDENCLI_APPDATA_DIR="$target"
+  echo "Switched to: $1"
+}
 
 # extract
 ex() {
