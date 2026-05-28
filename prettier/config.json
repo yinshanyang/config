@@ -4,6 +4,16 @@
   "bracketSpacing": true,
   "semi": false,
   "arrowParens": "always",
-  "trailingComma": "es5"
+  "trailingComma": "es5",
+  "plugins": [
+    "/Users/shanyang/.local/share/mise/installs/npm-prettier-plugin-svelte/latest/lib/node_modules/prettier-plugin-svelte/plugin.js"
+  ],
+  "overrides": [
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    }
+  ]
 }
-
