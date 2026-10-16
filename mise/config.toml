@@ -1,3 +1,7 @@
+[settings]
+rust.cargo_home = "~/.local/share/cargo"
+rust.rustup_home = "~/.local/share/rustup"
+
 [tools]
 bun = "1"
 node = "24"
