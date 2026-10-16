@@ -36,38 +36,19 @@
 !ghostty
 !ghostty/config
 
-# alacritty
-!alacritty
-!alacritty/alacritty.toml
-!alacritty/themes
-!alacritty/themes/*
-!alacritty/icon.sh
-
-# iterm2
-!iterm2
-!iterm2/settings
-!iterm2/settings/com.googlecode.iterm2.plist
-
-# karabiner
-!karabiner
-!karabiner/karabiner.json
-
 # ubersicht
 !ubersicht
 !ubersicht/widgets
 !ubersicht/widgets/**
 
+# helix
+!helix
+!helix/config.toml
+!helix/languages.toml
+
 # vscode
 !vscode.extensions
 !vscode.settings.json
-
-# nvim
-!nvim
-!nvim/**
-
-# neovide
-!neovide
-!neovide/**
 
 # mise
 !mise

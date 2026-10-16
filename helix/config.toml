@@ -1,0 +1,27 @@
+theme = "nord"
+
+[editor]
+color-modes = true
+line-number = "relative"
+end-of-line-diagnostics = "hint"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+other-lines = "error"
+
+[keys.normal]
+Cmd-s = ":write"
+"Cmd-{" = ":buffer-previous"
+"Cmd-}" = ":buffer-next"
