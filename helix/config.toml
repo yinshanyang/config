@@ -1,6 +1,7 @@
 theme = "nord"
 
 [editor]
+auto-format = true
 color-modes = true
 line-number = "relative"
 end-of-line-diagnostics = "hint"
@@ -25,3 +26,5 @@ other-lines = "error"
 Cmd-s = ":write"
 "Cmd-{" = ":buffer-previous"
 "Cmd-}" = ":buffer-next"
+"Cmd-S-[" = ":buffer-previous"
+"Cmd-S-]" = ":buffer-next"
