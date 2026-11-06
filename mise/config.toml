@@ -7,7 +7,7 @@ bun = "1"
 node = "24"
 deno = "2"
 python = "3"
-rust = "1"
+rust = { version = "1", components = ["rust-analyzer"] }
 terraform = "1"
 zig = "0.11"
 
