@@ -14,7 +14,7 @@ zig = "0.11"
 "npm:prettier" = "3"
 "npm:prettier-plugin-svelte" = "3"
 "npm:typescript" = "6"
-"npm:@colbymchenry/codegraph" = "0.9"
+"npm:@colbymchenry/codegraph" = "1"
 
 # LSPs for Helix
 "npm:typescript-language-server" = "6"  # typescript
