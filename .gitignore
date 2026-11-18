@@ -9,6 +9,7 @@
 !zsh/zshrc
 !zsh/aliases.zsh
 !zsh/environment.zsh
+!zsh/keybinds.zsh
 !zsh/prompt.zsh
 
 # homebrew
